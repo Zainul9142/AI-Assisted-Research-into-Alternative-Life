@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Assisted Research into Alternative Life | Computational Framework</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20">
+          <i class="fa-solid fa-dna text-lg"></i>
+        </div>
+        <div>
+          <h1 class="text-base font-bold text-white tracking-tight flex items-center gap-2">
+            AI-Assisted Research into Alternative Life
+            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-400 border border-cyan-800">v1.1</span>
+          </h1>
+          <p class="text-xs text-slate-400">Author: Md Ekbal | Zenodo DOI: 10.5281/zenodo.23575763</p>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="flex items-center space-x-3 text-xs">
+        <a href="https://zenodo.org/records/23575763" target="_blank" class="px-3 py-1.5 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800 hover:bg-emerald-900 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-file-circle-check"></i> Zenodo Record
+        </a>
+        <a href="https://github.com/Zainul9142/AI-Assisted-Research-into-Alternative-Life" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 border border-slate-700 hover:bg-slate-700 transition flex items-center gap-1.5">
+          <i class="fa-brands fa-github"></i> GitHub Repo
+        </a>
+        <a href="/api/manuscript/pdf" target="_blank" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-medium shadow-md transition flex items-center gap-1.5">
+          <i class="fa-solid fa-download"></i> Download PDF
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="bg-slate-950 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 flex space-x-1 overflow-x-auto text-sm font-medium">
+      <button onclick="switchTab('overview')" id="tab-overview" class="tab-btn px-4 py-3 border-b-2 border-cyan-500 text-cyan-400 flex items-center gap-2">
+        <i class="fa-solid fa-book-open"></i> Overview & Framework
+      </button>
+      <button onclick="switchTab('balance')" id="tab-balance" class="tab-btn px-4 py-3 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2">
+        <i class="fa-solid fa-atom"></i> Balance Checker
+      </button>
+      <button onclick="switchTab('taxonomy')" id="tab-taxonomy" class="tab-btn px-4 py-3 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2">
+        <i class="fa-solid fa-diagram-project"></i> Evidence Taxonomy
+      </button>
+      <button onclick="switchTab('metabolism')" id="tab-metabolism" class="tab-btn px-4 py-3 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2">
+        <i class="fa-solid fa-flask-vial"></i> COBRApy Simulation
+      </button>
+      <button onclick="switchTab('benchmark')" id="tab-benchmark" class="tab-btn px-4 py-3 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2">
+        <i class="fa-solid fa-list-check"></i> Benchmark Suite
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="max-w-7xl mx-auto px-4 py-6 flex-1 w-full">
+
+    <!-- 1. OVERVIEW TAB -->
+    <div id="content-overview" class="space-y-6">
+      <!-- Hero card -->
+      <div class="bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950/40 p-6 rounded-2xl border border-slate-800 shadow-xl">
+        <div class="max-w-4xl">
+          <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950/70 border border-cyan-800/80 px-2.5 py-1 rounded-md">Computational Astrobiology & AI Safety</span>
+          <h2 class="text-2xl font-bold text-white mt-3">An Evidence-Grounded Computational Framework for Oxygen-Independent Metabolism and Hypothetical Biochemistries</h2>
+          <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+            This system implements an auditable computational workflow to explore hypothetical biochemistries while strictly separating empirical observations from speculative assertions, preventing generative AI from proposing unphysical, atom-imbalanced reactions.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-4 pt-4 border-t border-slate-800/80 text-xs text-slate-400">
+            <div><strong class="text-slate-200">Author:</strong> Md Ekbal (ORCID: 0000-0002-6831-5135)</div>
+            <div><strong class="text-slate-200">Institution:</strong> KCC Institute of Technology and Management</div>
+            <div><strong class="text-slate-200">Date:</strong> October 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table 1 Card -->
+      <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-3">
+          <i class="fa-solid fa-layer-group text-cyan-400"></i> The Three Levels of "Life Without Oxygen" (Table 1)
+        </h3>
+        <p class="text-xs text-slate-400 mb-4">Scientific discussions often conflate organismal oxygen gas dependence with molecular oxygen atom composition. Our framework introduces a formal three-tier boundary:</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+            <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">Level 1 - Established</div>
+            <div class="font-semibold text-sm text-white">No Molecular Oxygen ($O_2$) Required</div>
+            <p class="text-xs text-slate-400 mt-2">Anaerobic fermentation and respiration conserve metabolic energy without $O_2$ gas.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+            <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">Level 2 - Established</div>
+            <div class="font-semibold text-sm text-white">Oxygen-Bearing Alternative Acceptors</div>
+            <p class="text-xs text-slate-400 mt-2">Respiration using nitrate ($NO_3^-$), sulfate ($SO_4^{2-}$), or $CO_2$. Organisms still deeply rely on oxygen atoms.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+            <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1">Level 3 - Speculative</div>
+            <div class="font-semibold text-sm text-white">Zero Oxygen Atoms in Molecular Makeup</div>
+            <p class="text-xs text-slate-400 mt-2">Hypothetical systems built without any oxygen atoms. Undemonstrated in nature; strictly speculative.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick actions -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 flex items-center justify-between">
+          <div>
+            <h4 class="font-bold text-sm text-white">Official Thesis Manuscript</h4>
+            <p class="text-xs text-slate-400 mt-1">Download the 10-page formatted PDF or editable DOCX.</p>
+          </div>
+          <div class="flex gap-2">
+            <a href="/api/manuscript/pdf" target="_blank" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium">PDF</a>
+            <a href="/api/manuscript/docx" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium">DOCX</a>
+          </div>
+        </div>
+        <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 flex items-center justify-between">
+          <div>
+            <h4 class="font-bold text-sm text-white">Interactive CLI & Codebase</h4>
+            <p class="text-xs text-slate-400 mt-1">CLI available in terminal: <code>python -m src.cli</code></p>
+          </div>
+          <button onclick="switchTab('balance')" class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-medium">Test Balance</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. BALANCE CHECKER TAB -->
+    <div id="content-balance" class="hidden space-y-6">
+      <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-2">
+          <i class="fa-solid fa-atom text-cyan-400"></i> Stoichiometric & Net Charge Balance Validator (Section 4.5)
+        </h3>
+        <p class="text-xs text-slate-400 mb-4">
+          Automated formula parsing and elemental conservation ($C, H, O, N, P, S, \dots$) to detect hallucinated or unbalanced reaction proposals.
+        </p>
+
+        <!-- Input Form -->
+        <div class="space-y-3">
+          <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider">Reaction Equation</label>
+          <div class="flex gap-2">
+            <input type="text" id="reaction-input" value="C6H12O6 -> 2 C2H5OH + 2 CO2" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white font-mono focus:outline-none focus:border-cyan-500">
+            <button onclick="runBalanceCheck()" class="px-5 py-2.5 bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-semibold rounded-xl shadow-md transition flex items-center gap-2">
+              <i class="fa-solid fa-play"></i> Check Balance
+            </button>
+          </div>
+
+          <!-- Example presets -->
+          <div class="flex flex-wrap items-center gap-2 pt-2 text-xs text-slate-400">
+            <span class="font-semibold text-slate-500">Presets:</span>
+            <button onclick="setReaction('C6H12O6 -> 2 C2H5OH + 2 CO2')" class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded-lg hover:border-slate-700 text-slate-300">Table 4: Ethanol Fermentation (Balanced)</button>
+            <button onclick="setReaction('C6H12O6 -> 2 C2H5OH + CO2')" class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded-lg hover:border-slate-700 text-amber-300">Table 4: Perturbed (Missing CO2)</button>
+            <button onclick="setReaction('CH4 + SO4[2-] -> HCO3- + HS- + H2O')" class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded-lg hover:border-slate-700 text-slate-300">Sulfate Methane Oxidation</button>
+            <button onclick="setReaction('Fe[3+] + e- -> Fe[2+]')" class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded-lg hover:border-slate-700 text-slate-300">Iron Reduction Redox</button>
+          </div>
+        </div>
+
+        <!-- Result Box -->
+        <div id="balance-result-container" class="mt-6 hidden">
+          <div id="balance-verdict-card" class="p-4 rounded-xl border mb-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span id="verdict-icon" class="text-xl"></span>
+                <div>
+                  <h4 id="verdict-title" class="font-bold text-sm"></h4>
+                  <p id="verdict-summary" class="text-xs text-slate-400 mt-0.5 font-mono"></p>
+                </div>
+              </div>
+              <div id="verdict-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></div>
+            </div>
+          </div>
+
+          <!-- Breakdown Tables -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+              <h5 class="text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Atom Conservation</h5>
+              <div id="atom-table-container"></div>
+            </div>
+            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+              <h5 class="text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Net Charge Conservation</h5>
+              <div id="charge-box" class="text-sm font-mono space-y-1 text-slate-300"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. EVIDENCE TAXONOMY TAB -->
+    <div id="content-taxonomy" class="hidden space-y-6">
+      <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+        <div class="flex flex-wrap justify-between items-center gap-4 mb-4">
+          <div>
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-diagram-project text-cyan-400"></i> Evidence-Record Database (Appendix A)
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">Every scientific claim is traceable to verified primary sources and assigned exactly one evidence tier (Classes A–D).</p>
+          </div>
+          <!-- Filter buttons -->
+          <div class="flex gap-1.5 text-xs font-medium">
+            <button onclick="filterTaxonomy('ALL')" class="tax-filter-btn px-3 py-1.5 rounded-lg bg-cyan-600 text-white font-bold" data-cls="ALL">All Claims</button>
+            <button onclick="filterTaxonomy('Class A')" class="tax-filter-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 border border-slate-800 hover:text-white" data-cls="Class A">Class A (Empirical)</button>
+            <button onclick="filterTaxonomy('Class B')" class="tax-filter-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 border border-slate-800 hover:text-white" data-cls="Class B">Class B (Model)</button>
+            <button onclick="filterTaxonomy('Class C')" class="tax-filter-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 border border-slate-800 hover:text-white" data-cls="Class C">Class C (Speculative)</button>
+            <button onclick="filterTaxonomy('Class D')" class="tax-filter-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-400 border border-slate-800 hover:text-white" data-cls="Class D">Class D (Contradicted)</button>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-900 text-slate-400 uppercase tracking-wider text-[11px] border-b border-slate-800">
+              <tr>
+                <th class="py-3 px-3">ID</th>
+                <th class="py-3 px-3">Claim Statement</th>
+                <th class="py-3 px-3">Evidence Tier</th>
+                <th class="py-3 px-3">Primary Source</th>
+                <th class="py-3 px-3">Reviewer Status</th>
+              </tr>
+            </thead>
+            <tbody id="taxonomy-table-body" class="divide-y divide-slate-800">
+              <tr><td colspan="5" class="py-8 text-center text-slate-500">Loading evidence records...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. COBRApy METABOLIC SIMULATION TAB -->
+    <div id="content-metabolism" class="hidden space-y-6">
+      <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-2">
+          <i class="fa-solid fa-flask-vial text-cyan-400"></i> Constraint-Based Metabolic Modeling & Oxygen Audit (Section 4.4)
+        </h3>
+        <p class="text-xs text-slate-400 mb-6">
+          Flux Balance Analysis (FBA) on curated genome-scale reconstructions. Tests aerobic respiration vs zero-$O_2$ uptake anaerobic mixed-acid fermentation to demonstrate why Level 1 growth is feasible, while Level 3 remains impossible.
+        </p>
+
+        <!-- Controls -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-slate-900 p-5 rounded-xl border border-slate-800 mb-6">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Oxygen Environment</label>
+            <div class="flex gap-2">
+              <button onclick="setAnaerobic(true)" id="btn-anaero" class="flex-1 py-2 px-3 rounded-lg text-xs font-bold bg-cyan-600 text-white">Anaerobic (Zero O2)</button>
+              <button onclick="setAnaerobic(false)" id="btn-aero" class="flex-1 py-2 px-3 rounded-lg text-xs font-medium bg-slate-800 text-slate-400">Aerobic (O2)</button>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Glucose Uptake Rate (<span id="glc-val">10</span> mmol/gDW/hr)</label>
+            <input type="range" id="glc-slider" min="1" max="25" value="10" step="1" oninput="updateGlucose(this.value)" class="w-full accent-cyan-500">
+          </div>
+          <div class="flex items-end">
+            <button onclick="runMetabolicSim()" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold rounded-lg transition shadow-md">
+              <i class="fa-solid fa-bolt mr-1"></i> Re-optimize FBA Model
+            </button>
+          </div>
+        </div>
+
+        <!-- Simulation Outputs -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400 uppercase">Growth Rate (Objective)</div>
+            <div id="sim-growth-rate" class="text-2xl font-bold text-emerald-400 mt-1">--</div>
+            <div id="sim-growth-sub" class="text-xs text-slate-500 mt-1">hr⁻¹ biomass accumulation</div>
+          </div>
+          <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400 uppercase">Oxygen Exchange Flux (EX_o2_e)</div>
+            <div id="sim-o2-flux" class="text-2xl font-bold text-cyan-400 mt-1">--</div>
+            <div class="text-xs text-slate-500 mt-1">mmol / gDW / hr</div>
+          </div>
+          <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400 uppercase">Cellular Oxygen Dependency Audit</div>
+            <div id="sim-oxygen-audit" class="text-2xl font-bold text-amber-400 mt-1">--</div>
+            <div class="text-xs text-slate-500 mt-1">of metabolites contain oxygen atoms</div>
+          </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
+          <h4 class="text-xs font-bold text-slate-300 uppercase tracking-wider mb-4">Active Excretion & Fermentation Fluxes</h4>
+          <div class="h-64">
+            <canvas id="fluxChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. BENCHMARK SUITE TAB -->
+    <div id="content-benchmark" class="hidden space-y-6">
+      <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800">
+        <div class="flex flex-wrap justify-between items-center gap-4 mb-4">
+          <div>
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-list-check text-cyan-400"></i> Automated Validation Benchmark (Section 6.1)
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">20 ground-truth reactions testing balanced biochemistries against perturbed equations and hallucinated AI reactions.</p>
+          </div>
+          <button onclick="runBenchmark()" class="px-4 py-2 bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold rounded-lg shadow transition flex items-center gap-2">
+            <i class="fa-solid fa-rotate-right"></i> Run Benchmark Suite
+          </button>
+        </div>
+
+        <div id="benchmark-summary" class="hidden grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400 uppercase">Total Tasks</div>
+            <div id="bench-total" class="text-2xl font-bold text-white mt-1">--</div>
+          </div>
+          <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400 uppercase">Correct Classifications</div>
+            <div id="bench-correct" class="text-2xl font-bold text-emerald-400 mt-1">--</div>
+          </div>
+          <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+            <div class="text-xs text-slate-400 uppercase">Benchmark Accuracy</div>
+            <div id="bench-acc" class="text-2xl font-bold text-cyan-400 mt-1">--</div>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-900 text-slate-400 uppercase tracking-wider text-[11px] border-b border-slate-800">
+              <tr>
+                <th class="py-3 px-3">Status</th>
+                <th class="py-3 px-3">Task ID</th>
+                <th class="py-3 px-3">Category</th>
+                <th class="py-3 px-3 font-mono">Reaction</th>
+                <th class="py-3 px-3">Expected</th>
+                <th class="py-3 px-3">Automated Verdict</th>
+              </tr>
+            </thead>
+            <tbody id="benchmark-table-body" class="divide-y divide-slate-800">
+              <tr><td colspan="6" class="py-8 text-center text-slate-500">Click "Run Benchmark Suite" to evaluate...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-950 py-4 text-center text-xs text-slate-500">
+    <p>AI-Assisted Research into Alternative Life &copy; 2026 Md Ekbal | Licensed under CC BY 4.0</p>
+  </footer>
+
+  <script>
+    let fluxChart = null;
+    let isAnaerobicMode = true;
+    let glucoseUptakeVal = 10.0;
+    let allEvidenceRecords = [];
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('border-cyan-500', 'text-cyan-400');
+        btn.classList.add('border-transparent', 'text-slate-400');
+      });
+      document.getElementById('tab-' + tabId).classList.add('border-cyan-500', 'text-cyan-400');
+      document.getElementById('tab-' + tabId).classList.remove('border-transparent', 'text-slate-400');
+
+      ['overview', 'balance', 'taxonomy', 'metabolism', 'benchmark'].forEach(t => {
+        document.getElementById('content-' + t).classList.add('hidden');
+      });
+      document.getElementById('content-' + tabId).classList.remove('hidden');
+
+      if (tabId === 'taxonomy' && allEvidenceRecords.length === 0) {
+        loadEvidence();
+      }
+      if (tabId === 'metabolism' && !fluxChart) {
+        runMetabolicSim();
+      }
+    }
+
+    function setReaction(rxn) {
+      document.getElementById('reaction-input').value = rxn;
+      runBalanceCheck();
+    }
+
+    async function runBalanceCheck() {
+      const rxn = document.getElementById('reaction-input').value;
+      if (!rxn.trim()) return;
+
+      try {
+        const resp = await fetch('/api/check-balance', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({reaction: rxn})
+        });
+        const data = await resp.json();
+
+        const container = document.getElementById('balance-result-container');
+        container.classList.remove('hidden');
+
+        const card = document.getElementById('balance-verdict-card');
+        const icon = document.getElementById('verdict-icon');
+        const title = document.getElementById('verdict-title');
+        const summary = document.getElementById('verdict-summary');
+        const badge = document.getElementById('verdict-badge');
+
+        if (data.is_balanced) {
+          card.className = "p-4 rounded-xl border bg-emerald-950/40 border-emerald-800 text-emerald-200 mb-4";
+          icon.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-400"></i>';
+          title.innerText = "Reaction is Stoichiometrically & Charge Balanced";
+          badge.className = "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-900 text-emerald-300 border border-emerald-700";
+          badge.innerText = "PASSED";
+        } else {
+          card.className = "p-4 rounded-xl border bg-rose-950/40 border-rose-800 text-rose-200 mb-4";
+          icon.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-rose-400"></i>';
+          title.innerText = "Reaction Imbalance Detected (Violates Conservation of Mass/Charge)";
+          badge.className = "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-900 text-rose-300 border border-rose-700";
+          badge.innerText = "FAILED";
+        }
+        summary.innerText = data.summary;
+
+        // Atom table
+        let tableHtml = '<table class="w-full text-left text-xs font-mono"><thead class="text-slate-500 border-b border-slate-800"><tr><th class="py-1">Element</th><th>LHS</th><th>RHS</th><th>Delta</th></tr></thead><tbody>';
+        const allElements = Array.from(new Set([...Object.keys(data.lhs_atoms), ...Object.keys(data.rhs_atoms)])).sort();
+        allElements.forEach(el => {
+          const l = data.lhs_atoms[el] || 0;
+          const r = data.rhs_atoms[el] || 0;
+          const d = data.atom_deltas[el] || 0;
+          const colorClass = d === 0 ? "text-emerald-400" : "text-rose-400 font-bold";
+          tableHtml += `<tr class="border-b border-slate-800/50"><td class="py-1 font-bold">${el}</td><td>${l}</td><td>${r}</td><td class="${colorClass}">${d > 0 ? '+' + d : d}</td></tr>`;
+        });
+        tableHtml += '</tbody></table>';
+        document.getElementById('atom-table-container').innerHTML = tableHtml;
+
+        // Charge box
+        const chColor = data.charge_delta === 0 ? "text-emerald-400" : "text-rose-400 font-bold";
+        document.getElementById('charge-box').innerHTML = `
+          <div>LHS Net Charge: <span class="font-bold">${data.lhs_charge >= 0 ? '+' + data.lhs_charge : data.lhs_charge}</span></div>
+          <div>RHS Net Charge: <span class="font-bold">${data.rhs_charge >= 0 ? '+' + data.rhs_charge : data.rhs_charge}</span></div>
+          <div>Charge Delta:   <span class="${chColor}">${data.charge_delta >= 0 ? '+' + data.charge_delta : data.charge_delta}</span></div>
+        `;
+      } catch (err) {
+        alert("Balance check error: " + err);
+      }
+    }
+
+    async function loadEvidence() {
+      try {
+        const resp = await fetch('/api/evidence');
+        const data = await resp.json();
+        allEvidenceRecords = data.records;
+        renderTaxonomyTable(allEvidenceRecords);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    function renderTaxonomyTable(records) {
+      const tbody = document.getElementById('taxonomy-table-body');
+      tbody.innerHTML = '';
+      if (!records || records.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" class="py-6 text-center text-slate-500">No records found.</td></tr>';
+        return;
+      }
+      records.forEach(r => {
+        let badgeColor = "bg-slate-800 text-slate-300";
+        if (r.evidence_class.includes("Class A")) badgeColor = "bg-emerald-950 text-emerald-400 border border-emerald-800";
+        else if (r.evidence_class.includes("Class B")) badgeColor = "bg-cyan-950 text-cyan-400 border border-cyan-800";
+        else if (r.evidence_class.includes("Class C")) badgeColor = "bg-amber-950 text-amber-400 border border-amber-800";
+        else if (r.evidence_class.includes("Class D")) badgeColor = "bg-rose-950 text-rose-400 border border-rose-800";
+
+        const tr = document.createElement('tr');
+        tr.className = "hover:bg-slate-900/60 transition";
+        tr.innerHTML = `
+          <td class="py-3 px-3 font-mono font-bold text-slate-400">${r.claim_id}</td>
+          <td class="py-3 px-3 font-medium text-slate-200">${r.claim_text}</td>
+          <td class="py-3 px-3"><span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${badgeColor}">${r.evidence_class.split(' ')[0] + ' ' + r.evidence_class.split(' ')[1]}</span></td>
+          <td class="py-3 px-3 text-slate-400"><a href="${r.doi_or_url}" target="_blank" class="text-cyan-400 hover:underline">${r.authors} (${r.year})</a></td>
+          <td class="py-3 px-3 text-slate-300 uppercase tracking-wider text-[10px]">${r.reviewer_status}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function filterTaxonomy(filterVal) {
+      document.querySelectorAll('.tax-filter-btn').forEach(btn => {
+        btn.classList.remove('bg-cyan-600', 'text-white', 'font-bold');
+        btn.classList.add('bg-slate-900', 'text-slate-400');
+        if (btn.getAttribute('data-cls') === filterVal) {
+          btn.classList.add('bg-cyan-600', 'text-white', 'font-bold');
+          btn.classList.remove('bg-slate-900', 'text-slate-400');
+        }
+      });
+      if (filterVal === 'ALL') {
+        renderTaxonomyTable(allEvidenceRecords);
+      } else {
+        const filtered = allEvidenceRecords.filter(r => r.evidence_class.includes(filterVal));
+        renderTaxonomyTable(filtered);
+      }
+    }
+
+    function setAnaerobic(val) {
+      isAnaerobicMode = val;
+      const bAna = document.getElementById('btn-anaero');
+      const bAer = document.getElementById('btn-aero');
+      if (val) {
+        bAna.className = "flex-1 py-2 px-3 rounded-lg text-xs font-bold bg-cyan-600 text-white";
+        bAer.className = "flex-1 py-2 px-3 rounded-lg text-xs font-medium bg-slate-800 text-slate-400";
+      } else {
+        bAer.className = "flex-1 py-2 px-3 rounded-lg text-xs font-bold bg-cyan-600 text-white";
+        bAna.className = "flex-1 py-2 px-3 rounded-lg text-xs font-medium bg-slate-800 text-slate-400";
+      }
+      runMetabolicSim();
+    }
+
+    function updateGlucose(val) {
+      glucoseUptakeVal = parseFloat(val);
+      document.getElementById('glc-val').innerText = val;
+    }
+
+    async function runMetabolicSim() {
+      try {
+        const resp = await fetch('/api/simulate-metabolism', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({anaerobic: isAnaerobicMode, glucose_uptake: glucoseUptakeVal})
+        });
+        const data = await resp.json();
+
+        document.getElementById('sim-growth-rate').innerText = data.objective_value.toFixed(4) + ' hr⁻¹';
+        document.getElementById('sim-o2-flux').innerText = data.o2_exchange_flux.toFixed(4);
+        document.getElementById('sim-oxygen-audit').innerText = data.oxygen_audit.percentage_oxygen_bearing + '%';
+
+        // Chart
+        const labels = Object.keys(data.active_fermentation_fluxes);
+        const values = Object.values(data.active_fermentation_fluxes);
+
+        if (fluxChart) fluxChart.destroy();
+        const ctx = document.getElementById('fluxChart').getContext('2d');
+        fluxChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: labels.length ? labels : ['No Fermentation Secretion'],
+            datasets: [{
+              label: 'Excretion Flux (mmol/gDW/hr)',
+              data: values.length ? values : [0],
+              backgroundColor: isAnaerobicMode ? '#06b6d4' : '#6366f1',
+              borderRadius: 6
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              y: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' } },
+              x: { grid: { display: false }, ticks: { color: '#94a3b8' } }
+            },
+            plugins: {
+              legend: { labels: { color: '#cbd5e1' } }
+            }
+          }
+        });
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    async function runBenchmark() {
+      const tbody = document.getElementById('benchmark-table-body');
+      tbody.innerHTML = '<tr><td colspan="6" class="py-8 text-center text-cyan-400"><i class="fa-solid fa-spinner fa-spin mr-2"></i>Evaluating 20 benchmark reactions...</td></tr>';
+
+      try {
+        const resp = await fetch('/api/run-benchmark', {method: 'POST'});
+        const data = await resp.json();
+
+        document.getElementById('benchmark-summary').classList.remove('hidden');
+        document.getElementById('bench-total').innerText = data.total_tasks;
+        document.getElementById('bench-correct').innerText = data.correct_predictions;
+        document.getElementById('bench-acc').innerText = data.accuracy + '%';
+
+        tbody.innerHTML = '';
+        data.tasks.forEach(t => {
+          const statusIcon = t.is_correct ? '<span class="text-emerald-400 font-bold"><i class="fa-solid fa-check"></i> PASS</span>' : '<span class="text-rose-400 font-bold"><i class="fa-solid fa-xmark"></i> FAIL</span>';
+          const tr = document.createElement('tr');
+          tr.className = "hover:bg-slate-900/60 transition";
+          tr.innerHTML = `
+            <td class="py-2.5 px-3">${statusIcon}</td>
+            <td class="py-2.5 px-3 font-mono text-slate-400 font-bold">${t.task_id}</td>
+            <td class="py-2.5 px-3 text-slate-300">${t.category}</td>
+            <td class="py-2.5 px-3 font-mono text-slate-200">${t.reaction}</td>
+            <td class="py-2.5 px-3 text-slate-400 font-bold">${t.expected_balanced ? 'Balanced' : 'Imbalanced'}</td>
+            <td class="py-2.5 px-3 text-xs text-slate-400">${t.verdict}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      } catch (err) {
+        alert("Benchmark error: " + err);
+      }
+    }
+  </script>
+</body>
+</html>
