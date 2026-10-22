@@ -1,0 +1,89 @@
+[
+  {
+    "claim_id": "SPEC-001",
+    "hypothesis_title": "Cryogenic Polysilane and Organosilicon Metabolism in Liquid Methane",
+    "chemical_validity": {
+      "criterion": "Chemical validity",
+      "question": "Are all proposed reactions atom- and charge-balanced?",
+      "rating": "MET",
+      "rationale": "Representative catabolic reactions of silanes (e.g. SiH4 + 2 C2H2 -> SiC4H8) can be written with strict stoichiometric balance."
+    },
+    "thermodynamic_plausibility": {
+      "criterion": "Thermodynamic plausibility",
+      "question": "Is the overall free-energy change favourable under stated conditions, using reliable data?",
+      "rating": "PARTLY_MET",
+      "rationale": "Free-energy changes at 94 K are kinetically limited; reaction rates are orders of magnitude slower than terrestrial kinetics."
+    },
+    "stability_and_environment": {
+      "criterion": "Stability and environment",
+      "question": "Are the molecules stable in the proposed solvent, temperature and pressure range?",
+      "rating": "MET",
+      "rationale": "Polysilanes are stable against hydrolysis in strictly anhydrous liquid methane/ethane reservoirs."
+    },
+    "functional_completeness": {
+      "criterion": "Functional completeness",
+      "question": "Are information storage, catalysis, compartmentalisation and energy conservation all addressed?",
+      "rating": "NOT_MET",
+      "rationale": "No complete system architecture exists: enzyme-like catalysts and informatic polymers capable of replication without oxygen are unproven."
+    },
+    "empirical_accessibility": {
+      "criterion": "Empirical accessibility",
+      "question": "Is there a feasible observation or experiment that could support or refute the claim?",
+      "rating": "PARTLY_MET",
+      "rationale": "Laboratory simulation chambers (cryogenic photochemical cells) and in situ Titan mission probes (e.g. Dragonfly) can sample atmospheric/surface products."
+    },
+    "overall_verdict": "Speculative Hypothesis with Substantial Gaps (Class C)",
+    "key_knowledge_gaps": [
+      "Catalytic macromolecule diversity in non-polar cryo-solvents",
+      "Error rate of non-aqueous template-directed polymerisation",
+      "Transport and cellular energy conservation mechanisms"
+    ],
+    "proposed_computational_tests": [
+      "Quantum chemical DFT transition-state barrier calculation at 94 K",
+      "Molecular dynamics simulation of non-polar membrane analogues (azotosomes)"
+    ]
+  },
+  {
+    "claim_id": "SPEC-002",
+    "hypothesis_title": "Fully Oxygen-Free Anaerobic Nitrogen/Phosphorus Membrane Architecture",
+    "chemical_validity": {
+      "criterion": "Chemical validity",
+      "question": "Are all proposed reactions atom- and charge-balanced?",
+      "rating": "MET",
+      "rationale": "All condensation reactions can be balanced; proposed cyclophosphazene and polyphosphazene polymers respect formal valence."
+    },
+    "thermodynamic_plausibility": {
+      "criterion": "Thermodynamic plausibility",
+      "question": "Is the overall free-energy change favourable under stated conditions, using reliable data?",
+      "rating": "PARTLY_MET",
+      "rationale": "Synthesis requires high activation energy and reducing potentials."
+    },
+    "stability_and_environment": {
+      "criterion": "Stability and environment",
+      "question": "Are the molecules stable in the proposed solvent, temperature and pressure range?",
+      "rating": "PARTLY_MET",
+      "rationale": "Polyphosphazenes can endure diverse temperatures but their phase behavior in non-aqueous solvents is poorly characterized."
+    },
+    "functional_completeness": {
+      "criterion": "Functional completeness",
+      "question": "Are information storage, catalysis, compartmentalisation and energy conservation all addressed?",
+      "rating": "NOT_MET",
+      "rationale": "Addresses compartmentalisation only; fails to address heredity, template replication, and bioenergetic coupling."
+    },
+    "empirical_accessibility": {
+      "criterion": "Empirical accessibility",
+      "question": "Is there a feasible observation or experiment that could support or refute the claim?",
+      "rating": "MET",
+      "rationale": "Synthetic polymer vesicles can be synthesized and tested for permeability and structural stability in vitro."
+    },
+    "overall_verdict": "Speculative Hypothesis with Substantial Gaps (Class C)",
+    "key_knowledge_gaps": [
+      "Integration of membrane transport proteins lacking oxygen atoms",
+      "Osmotic stability in hydrocarbon vs formamide solvents"
+    ],
+    "proposed_computational_tests": [
+      "Coarse-grained membrane self-assembly simulation",
+      "Solvation free energy calculation across alternative solvent matrices"
+    ]
+  }
+]

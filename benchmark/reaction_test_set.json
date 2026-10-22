@@ -1,0 +1,142 @@
+[
+  {
+    "task_id": "RXN-001",
+    "category": "Table 4 Reference Case",
+    "reaction": "C6H12O6 -> 2 C2H5OH + 2 CO2",
+    "expected_balanced": true,
+    "notes": "Classic ethanol fermentation of glucose (balanced in C, H, O)."
+  },
+  {
+    "task_id": "RXN-002",
+    "category": "Table 4 Reference Perturbation",
+    "reaction": "C6H12O6 -> 2 C2H5OH + CO2",
+    "expected_balanced": false,
+    "notes": "Perturbed ethanol fermentation: deficient by 1 C and 2 O atoms."
+  },
+  {
+    "task_id": "RXN-003",
+    "category": "Anaerobic Fermentation",
+    "reaction": "C6H12O6 -> 2 C3H6O3",
+    "expected_balanced": true,
+    "notes": "Homolactic fermentation (glucose to D-lactate)."
+  },
+  {
+    "task_id": "RXN-004",
+    "category": "Methanogenesis",
+    "reaction": "4 H2 + CO2 -> CH4 + 2 H2O",
+    "expected_balanced": true,
+    "notes": "Hydrogenotrophic methanogenesis by Methanobacteria."
+  },
+  {
+    "task_id": "RXN-005",
+    "category": "Methanogenesis Perturbation",
+    "reaction": "3 H2 + CO2 -> CH4 + 2 H2O",
+    "expected_balanced": false,
+    "notes": "Stoichiometric error in H2 coefficient (6 H on LHS vs 8 H on RHS)."
+  },
+  {
+    "task_id": "RXN-006",
+    "category": "Acetogenesis",
+    "reaction": "4 H2 + 2 CO2 -> C2H4O2 + 2 H2O",
+    "expected_balanced": true,
+    "notes": "Wood-Ljungdahl pathway producing acetate."
+  },
+  {
+    "task_id": "RXN-007",
+    "category": "Sulfate Reduction",
+    "reaction": "CH4 + SO4[2-] -> HCO3- + HS- + H2O",
+    "expected_balanced": true,
+    "notes": "Anaerobic methane oxidation coupled to sulfate reduction (ANME)."
+  },
+  {
+    "task_id": "RXN-008",
+    "category": "Sulfate Reduction Charge Imbalance",
+    "reaction": "CH4 + SO4[2-] -> HCO3- + HS + H2O",
+    "expected_balanced": false,
+    "notes": "Charge imbalance: LHS charge -2, RHS charge -1 (missing negative charge on HS-)."
+  },
+  {
+    "task_id": "RXN-009",
+    "category": "Iron Reduction",
+    "reaction": "Fe[3+] + e- -> Fe[2+]",
+    "expected_balanced": true,
+    "notes": "Single-electron reduction of ferric iron."
+  },
+  {
+    "task_id": "RXN-010",
+    "category": "Iron Reduction Charge Imbalance",
+    "reaction": "Fe[3+] -> Fe[2+]",
+    "expected_balanced": false,
+    "notes": "Missing electron; net charge changes from +3 to +2."
+  },
+  {
+    "task_id": "RXN-011",
+    "category": "Denitrification",
+    "reaction": "2 NO3- + 10 e- + 12 H+ -> N2 + 6 H2O",
+    "expected_balanced": true,
+    "notes": "Complete reduction of nitrate to dinitrogen gas."
+  },
+  {
+    "task_id": "RXN-012",
+    "category": "Denitrification Imbalance",
+    "reaction": "2 NO3- + 8 e- + 10 H+ -> N2 + 5 H2O",
+    "expected_balanced": false,
+    "notes": "Imbalanced oxygen and charge: 6 O on LHS vs 5 O on RHS."
+  },
+  {
+    "task_id": "RXN-013",
+    "category": "Mixed-Acid Formate Cleavage",
+    "reaction": "C3H3O3- + H2O -> C2H3O2- + CH2O2",
+    "expected_balanced": true,
+    "notes": "Pyruvate hydration and cleavage to acetate and formate."
+  },
+  {
+    "task_id": "RXN-014",
+    "category": "Pyruvate Formate-Lyase Imbalance",
+    "reaction": "C3H4O3 -> C2H4O2 + CH2O2",
+    "expected_balanced": false,
+    "notes": "Direct cleavage without water creates hydrogen surplus on RHS (4 H -> 6 H)."
+  },
+  {
+    "task_id": "RXN-015",
+    "category": "Hypothetical Cryogenic Silane",
+    "reaction": "SiH4 + 2 C2H2 -> SiC4H8",
+    "expected_balanced": true,
+    "notes": "Balanced hypothetical organosilicon addition in liquid hydrocarbons."
+  },
+  {
+    "task_id": "RXN-016",
+    "category": "Hypothetical Cryogenic Silane Imbalance",
+    "reaction": "SiH4 + C2H2 -> SiC4H8",
+    "expected_balanced": false,
+    "notes": "Carbon and hydrogen deficit (missing second alkyne molecule)."
+  },
+  {
+    "task_id": "RXN-017",
+    "category": "Ammonium Oxidation (Anammox)",
+    "reaction": "NH4+ + NO2- -> N2 + 2 H2O",
+    "expected_balanced": true,
+    "notes": "Anaerobic ammonium oxidation."
+  },
+  {
+    "task_id": "RXN-018",
+    "category": "Anammox Imbalance",
+    "reaction": "NH4+ + NO2- -> N2 + H2O",
+    "expected_balanced": false,
+    "notes": "Oxygen deficit: 2 O on LHS vs 1 O on RHS."
+  },
+  {
+    "task_id": "RXN-019",
+    "category": "Sulfur Disproportionation",
+    "reaction": "4 S + 4 H2O -> 3 H2S + H2SO4",
+    "expected_balanced": true,
+    "notes": "Microbial disproportionation of elemental sulfur."
+  },
+  {
+    "task_id": "RXN-020",
+    "category": "Complex Hydrolysis",
+    "reaction": "C12H22O11 + H2O -> 2 C6H12O6",
+    "expected_balanced": true,
+    "notes": "Maltose / sucrose hydrolysis to hexoses."
+  }
+]

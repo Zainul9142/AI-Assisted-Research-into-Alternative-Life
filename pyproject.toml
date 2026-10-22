@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alternative-life-framework"
+version = "1.1.0"
+description = "An Evidence-Grounded Computational Framework for Oxygen-Independent Metabolism and Hypothetical Biochemistries"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "CC-BY-4.0"}
+authors = [
+    {name = "Md Ekbal", email = "zainul7abideen@gmail.com"}
+]
+keywords = [
+    "artificial-life",
+    "astrobiology",
+    "anaerobic-metabolism",
+    "artificial-intelligence",
+    "cobrapy",
+    "flux-balance-analysis",
+    "xenobiology"
+]
+dependencies = [
+    "cobra>=0.29.0",
+    "pandas>=2.0.0",
+    "pydantic>=2.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "python-docx>=1.1.0",
+    "pymupdf>=1.24.0"
+]
+
+[project.scripts]
+alternative-life = "src.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
