@@ -1,6 +1,6 @@
 # AI-Assisted Research into Alternative Life
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23574418.svg)](https://doi.org/10.5281/zenodo.23574418)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23575763.svg)](https://doi.org/10.5281/zenodo.23575763)
 [![CI](https://github.com/Zainul9142/AI-Assisted-Research-into-Alternative-Life/actions/workflows/ci.yml/badge.svg)](https://github.com/Zainul9142/AI-Assisted-Research-into-Alternative-Life/actions)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -20,7 +20,7 @@ Crucially, scientific and public discussions frequently conflate:
 
 This repository provides the reference computational implementation, evidence-record schemas, stoichiometric validation parsers, and constraint-based metabolic simulation protocols corresponding to the thesis:
 
-> **Ekbal, Md.** (2026). *AI-Assisted Research into Alternative Life: An Evidence-Grounded Computational Framework for Oxygen-Independent Metabolism and Hypothetical Biochemistries*. Zenodo. DOI: [10.5281/zenodo.23574418](https://doi.org/10.5281/zenodo.23574418).
+> **Ekbal, Md.** (2026). *AI-Assisted Research into Alternative Life: An Evidence-Grounded Computational Framework for Oxygen-Independent Metabolism and Hypothetical Biochemistries*. Zenodo. DOI: [10.5281/zenodo.23575763](https://doi.org/10.5281/zenodo.23575763) (Version 1.1) | Concept DOI: [10.5281/zenodo.23574417](https://doi.org/10.5281/zenodo.23574417).
 
 ---
 
@@ -252,9 +252,10 @@ If you use this conceptual framework, computational validation protocol, or evid
   title     = {AI-Assisted Research into Alternative Life: An Evidence-Grounded Computational Framework for Oxygen-Independent Metabolism and Hypothetical Biochemistries},
   year      = {2026},
   month     = {October},
-  doi       = {10.5281/zenodo.23574418},
+  version   = {v1.1},
+  doi       = {10.5281/zenodo.23575763},
   publisher = {Zenodo},
-  url       = {https://doi.org/10.5281/zenodo.23574418}
+  url       = {https://doi.org/10.5281/zenodo.23575763}
 }
 ```
 
